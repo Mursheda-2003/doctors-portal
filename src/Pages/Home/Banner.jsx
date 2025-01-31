@@ -1,12 +1,13 @@
 import img from "../../assets/images/chair.png"
+import "./Banner.css"
 const Banner = () => {
   return (
-   <div className="">
-     <div className=" flex flex-cols-1 max-w-7xl mx-auto  ">
+   <div className="bg-img">
+     <div className=" flex flex-cols-1 max-w-7xl mx-auto gap-12 ">
       <div className="mt-20 ">
         <h1 className="text-black font-bold">Your New Smile Starts <br /> Here</h1>
-        <p className="text-black">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-        <button className="btn btn-info text-white">GET STARTED</button>
+        <p className="text-black mt-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+        <button className="btn btn-info text-white mt-6">GET STARTED</button>
       </div>
       <div>
         <img className="mt-20" src={img}alt="" />
