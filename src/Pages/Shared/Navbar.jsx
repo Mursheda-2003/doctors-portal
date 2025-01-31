@@ -1,27 +1,22 @@
 
 import { Link } from "react-router-dom";
-// import { FaShoppingCart } from "react-icons/fa";
 
 
 
 const Navbar = () => {
     const navLink = 
-    <div className="flex md:flex-row flex-col gap-5 uppercase text-black md:text-white">  
-      <Link to="/">Home</Link>
-      {/* <Link to="/contact">Contact Us</Link>
-      <Link to="/ourMenu">Our Menu</Link>
-      <Link to="/ourShop">Our Shop</Link> */}
-      {/* <Link to="/dashboard/cart">
-          <FaShoppingCart className="text-2xl"></FaShoppingCart>      
-          <div className="badge badge-secondary absolute top-0 mt-2 ml-3">+0</div>
-      </Link> */}
-
-      <Link to="/dashboard">Dashboard</Link>
+    <div className="flex md:flex-row flex-col gap-5 uppercase text-black md:text-black">  
+      <Link className="bg-black text-white rounded " to="/">Home</Link>
+      <Link to="/contact">About</Link>
+      <Link to="/ourMenu">Appoinment</Link>
+      <Link to="/ourShop">Our Shop</Link>
+      <Link to="/reviews">Reviews</Link>
+      <Link to="/contactUs">Contact Us</Link>
       <Link to="/login">Login</Link>
       
     </div>
   return (
-    <div className="bg-black bg-opacity-30 fixed z-10 w-full">
+    <div className="bg-white bg-opacity-30 fixed z-10 w-full">
       <div className="navbar  text-white max-w-7xl mx-auto">
         
   <div className="navbar-start">
@@ -47,7 +42,7 @@ const Navbar = () => {
       </ul>
     </div>
     <Link to="" className=" text-xl">
-      <h1 className="text-white">Seven Star <br /> <span className="text-xs">Restaurant</span></h1>
+      <h1 className="text-black">Doctors Portal </h1>
     </Link>
   </div>
   <div className="navbar-end hidden lg:flex">
