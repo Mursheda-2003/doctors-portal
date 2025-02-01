@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const navLink = 
-    <div className="flex md:flex-row flex-col gap-5 uppercase text-black md:text-black">  
+    <div className="flex md:flex-row flex-col gap-5 uppercase text-black md:text-black ">  
       <Link className="bg-black text-white rounded " to="/">Home</Link>
       <Link to="/contact">About</Link>
       <Link to="/ourMenu">Appoinment</Link>

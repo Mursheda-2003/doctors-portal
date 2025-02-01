@@ -1,19 +1,37 @@
+;
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
+import { useEffect, useState } from "react";
+
 
 
 
 const Login = () => {
+
+  const[value, setValue] = useState("");
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  useEffect(()=>{
+    loadCaptchaEnginge(6);
+  },[]);
+
+  const onSubmit = (data) => console.log(data)
+  const handleCaptcha = (event) =>{
+    const value = event.target.value;
+    console.log(value)
+    setValue(value)
+  } 
+
   return (
     <div>
          <div className="flex  h-screen justify-center gap-40 py-5 ">
-   <div className='border-solid border-2 border-slate-400 rounded-md max-h-fit mt-24	 px-3 '>
+   <div className='border-solid  rounded-md shadow-md ... max-h-fit mt-24 px-3 '>
     <h1 className="text-center text-xl mt-10 font-bold">Login</h1>
    <form onSubmit={handleSubmit()}>
       {/* register your input into the hook by invoking the "register" function */}
@@ -26,6 +44,13 @@ const Login = () => {
         <label htmlFor="" className="text-xl">Password</label>
         <br />
         <input className="focus:outline-none px-2 py-2 w-96 border-solid border-2 rounded	" {...register("pasword")} />
+      </div>
+      <div>
+        <label htmlFor="" className="text-xl">Password
+        <LoadCanvasTemplate />
+        </label>
+        <br />
+        <input type="text" onChange={handleCaptcha} className="focus:outline-none px-2 py-2 w-96" placeholder="write above captcha" />
       </div>
       <input className="btn mt-5 bg-black hover:bg-black text-white w-96 mb-2" type="submit" value="Login" />
     </form>

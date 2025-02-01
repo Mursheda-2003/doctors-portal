@@ -15,7 +15,7 @@ const SignUp = () => {
             <AiFillCaretLeft />
     </Link> */}
          <div className="flex  h-screen justify-center gap-40 py-5 ">
-   <div className='border-solid border-2 border-slate-400 rounded-md max-h-fit mt-16 px-3 '>
+   <div className='border-solid shadow-md ...  rounded-md max-h-fit mt-16 px-3 '>
     <h1 className="text-center text-xl mt-10 font-bold">SignUp</h1>
    <form onSubmit={handleSubmit()}>
       {/* register your input into the hook by invoking the "register" function */}
